@@ -1,18 +1,29 @@
-const mysql = require('mysql');
+const mongoose = require('mongoose');
 
-var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: ''
-})
-
-connection.connect((err) => {
-  if (err) {
-    console.log('err connecting to database', err);
-  } else {
-    console.log('connected to database');
-  }
+mongoose.connect('mongodb://localhost/itemImages',
+{
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
+const db = mongoose.connection;
 
-module.exports.bd = connection;
+db.on('error', console.error.bind(console, 'connection error: '));
+
+db.once('open', () => {
+  console.log('connection successful')
+})
+
+const itemImagesSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+    unique: true
+  },
+  imageUrls: Array
+})
+
+const ItemImages = mongoose.model('ItemImages', itemImagesSchema);
+
+module.exports = {
+  ItemImages
+};
