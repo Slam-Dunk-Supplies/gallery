@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: './client/src',
- devtool: 'inline-source-map',
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -11,14 +11,14 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
-          }
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
         },
       },
     ],
   },
   resolve: {
-    extensions: [ '.jsx', '.js' ],
+    extensions: ['.jsx', '.js'],
   },
   output: {
     filename: 'bundle.js',
