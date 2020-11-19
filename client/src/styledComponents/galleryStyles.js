@@ -47,6 +47,8 @@ export const Container = styled.div`
 
 export const SmallImagesContainer = styled.div`
   display: flex;
+  position: absolute;
+  bottom: 3%;
 `;
 
 export const SmallImageContainer = styled.div`

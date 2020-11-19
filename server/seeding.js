@@ -25,9 +25,9 @@ const seeder = () => {
     });
     oneSeed.save((err) => {
       if (err) {
-        console.log('err saving', err);
+        throw err;
       } else {
-        console.log('succesfully saved into db');
+        return 'seeded';
       }
     });
     lastSeed += 5;
