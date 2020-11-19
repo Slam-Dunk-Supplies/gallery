@@ -17,7 +17,9 @@ const getImage = (fileName) => {
       const stream = response.data;
       return stream.pipe(fs.createWriteStream(WRITE_PATH));
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      return (err);
+    });
 };
 
 const downloadImages = (times) => {

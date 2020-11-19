@@ -23,15 +23,9 @@ class App extends React.Component {
     this.getImages(itemId);
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log('component should update', nextProps, nextState);
-    return true;
-  }
-
   getImages(itemId) {
     Axios.get(`images/${itemId}`)
       .then((imagesObj) => {
-        console.log('this is imagesObj: ', imagesObj.data[0]);
         this.setState({
           itemImageObjs: imagesObj.data[0].imageUrls,
           currImg: 0,
@@ -47,7 +41,6 @@ class App extends React.Component {
   }
 
   setMain(image) {
-    console.log('this is main display: ', image);
     this.setState({
       main: image.url,
       currImg: image.id,
