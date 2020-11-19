@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './client/src',
+  entry: './client/src/components',
   devtool: 'inline-source-map',
   module: {
     rules: [
@@ -15,6 +15,12 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.(png|jpg)$/,
+        use: {
+          loader: 'file-loader',
+        },
+      },
     ],
   },
   resolve: {
@@ -24,4 +30,5 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './client/dist'),
   },
+  mode: 'development',
 };

@@ -2,7 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    "jest/globals": true,
+    jest: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -21,5 +21,8 @@ module.exports = {
   rules: {
     'no-plusplus': 'off',
     'no-console': 0,
+    'arrow-body-style': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
+    'jsx-a11y/no-static-element-interactions': 0,
   },
 };
