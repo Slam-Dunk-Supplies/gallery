@@ -2,14 +2,16 @@ import React from 'react';
 import Axios from 'axios';
 import AllImages from './allImages';
 import MainImage from './mainImage';
-import { Container } from '../styledComponents/galleryStyles';
+import {
+  Container, Navigation, CodeOff, Back, Home, Sports,
+} from '../styledComponents/galleryStyles';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       main: '',
-      itemId: 6,
+      itemId: 1,
       itemImageObjs: [],
       currImg: '',
     };
@@ -83,6 +85,15 @@ class App extends React.Component {
     const { itemImageObjs, main } = this.state;
     return (
       <Container>
+        <Navigation>
+          <Back>B A C K</Back>
+          <Home>Home</Home>
+          /
+          <Sports>Football</Sports>
+          /
+          <Sports>Accessories</Sports>
+        </Navigation>
+        <CodeOff> -30% CODE GETSHOES</CodeOff>
         <MainImage nextImage={this.nextImage} previousImage={this.previousImage} main={main} />
         <AllImages itemImageObjs={itemImageObjs} setMain={this.setMain} />
       </Container>
