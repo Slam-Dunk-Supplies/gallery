@@ -7,7 +7,7 @@ const port = 3002;
 
 app.use(express.static('client/dist'));
 
-app.get('/allImages', (req, res) => {
+app.get('api/allImages', (req, res) => {
   ItemImages.find({})
     .then((imageObjs) => {
       res.send(imageObjs);
@@ -17,7 +17,7 @@ app.get('/allImages', (req, res) => {
     });
 });
 
-app.get('/images/:itemId', (req, res) => {
+app.get('/api/images/:itemId', (req, res) => {
   const { itemId } = req.params;
   ItemImages.find({}).where('id').equals(`${itemId}`)
     .then((imageObj) => {

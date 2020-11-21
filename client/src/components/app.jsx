@@ -26,7 +26,7 @@ class App extends React.Component {
   }
 
   getImages(itemId) {
-    Axios.get(`images/${itemId}`)
+    Axios.get(`/api/images/${itemId}`)
       .then((imagesObj) => {
         this.setState({
           itemImageObjs: imagesObj.data[0].imageUrls,
