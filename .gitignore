@@ -1,7 +1,6 @@
 # images
 server/downloadedImgs
 coverage
-client/src/images
 # Logs
 logs
 *.log
