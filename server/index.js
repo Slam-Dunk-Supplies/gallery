@@ -5,7 +5,11 @@ const { ItemImages } = require('../database/index.js');
 const app = express();
 const port = 3002;
 
-app.use(express.static('client/dist'));
+app.use('/:id', express.static('client/dist'));
+
+app.get('/', (req, res) => {
+  res.redirect(`http://127.0.0.1:${port}/1`);
+});
 
 app.get('api/allImages', (req, res) => {
   ItemImages.find({})

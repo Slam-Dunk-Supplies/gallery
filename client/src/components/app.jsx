@@ -11,7 +11,6 @@ class App extends React.Component {
     super(props);
     this.state = {
       main: '',
-      itemId: 1,
       itemImageObjs: [],
       currImg: '',
     };
@@ -21,7 +20,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const { itemId } = this.state;
+    let itemId = 1;
+    if (window.location.pathname !== '/') {
+      const arr = window.location.pathname.split('/');
+      itemId = [arr[1]];
+    }
     this.getImages(itemId);
   }
 
