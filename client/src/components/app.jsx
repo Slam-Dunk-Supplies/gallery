@@ -17,15 +17,11 @@ class App extends React.Component {
     this.setMain = this.setMain.bind(this);
     this.nextImage = this.nextImage.bind(this);
     this.previousImage = this.previousImage.bind(this);
+    this.getImages = this.getImages.bind(this);
   }
 
   componentDidMount() {
-    let itemId = 1;
-    if (window.location.pathname !== '/') {
-      const arr = window.location.pathname.split('/');
-      itemId = [arr[1]];
-    }
-    this.getImages(itemId);
+    this.getImages(1);
   }
 
   getImages(itemId) {

@@ -5,8 +5,8 @@ const { ItemImages } = require('../database/index.js');
 const app = express();
 const port = 3002;
 
-app.use('/', express.static('client/dist'));
-app.use('/:id', express.static('client/dist'));
+app.use('/', express.static('public'));
+app.use('/:id', express.static('public'));
 
 app.get('/api/images', (req, res) => {
   ItemImages.find({}).where('id').equals(1)
