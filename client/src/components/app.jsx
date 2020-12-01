@@ -21,11 +21,16 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getImages(1);
+    let id = 1;
+    if (window.location.pathname !== '/') {
+      const arr = window.location.pathname.split('/');
+      [id] = [arr[1]];
+    }
+    this.getImages(id);
   }
 
   getImages(itemId) {
-    Axios.get(`/api/images/${itemId}`)
+    Axios.get(`/api/images/?id=${itemId}`)
       .then((imagesObj) => {
         this.setState({
           itemImageObjs: imagesObj.data[0].imageUrls,

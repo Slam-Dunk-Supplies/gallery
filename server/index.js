@@ -5,22 +5,13 @@ const { ItemImages } = require('../database/index.js');
 const app = express();
 const port = 3002;
 
-app.use('/', express.static('public'));
+app.use(express.static('public'));
 app.use('/:id', express.static('public'));
 
 app.get('/api/images', (req, res) => {
-  ItemImages.find({}).where('id').equals(1)
-    .then((imageObj) => {
-      res.send(imageObj);
-    })
-    .catch((err) => {
-      res.send(err);
-    });
-});
-
-app.get('/api/images/:itemId', (req, res) => {
-  const { itemId } = req.params;
-  ItemImages.find({}).where('id').equals(`${itemId}`)
+  const { id } = req.query;
+  console.log(req.query);
+  ItemImages.find({}).where('id').equals(`${id}`)
     .then((imageObj) => {
       res.send(imageObj);
     })

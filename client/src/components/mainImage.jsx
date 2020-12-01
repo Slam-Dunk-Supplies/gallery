@@ -1,6 +1,4 @@
 import React from 'react';
-import leftArrow from '../images/leftArrowTran.png';
-import rightArrow from '../images/rightArrowTran.png';
 import {
   ButtonRight, ButtonLeft, ButtonImg, MainImg,
 } from '../styledComponents/galleryStyles';
@@ -8,9 +6,9 @@ import {
 const mainImage = ({ previousImage, nextImage, main }) => {
   return (
     <div>
-      <ButtonLeft type="button" onClick={previousImage}><ButtonImg src={leftArrow} alt="leftArrow" /></ButtonLeft>
+      <ButtonLeft rel="preload" type="button" onClick={previousImage}><ButtonImg src="https://s3-us-west-2.amazonaws.com/adidas.gallery/leftArrowTran.png" alt="leftArrow" /></ButtonLeft>
       <MainImg src={main} alt="DisplaysMainImg" />
-      <ButtonRight type="button" onClick={nextImage}><ButtonImg src={rightArrow} alt="rightArrow" /></ButtonRight>
+      <ButtonRight rel="preload" type="button" onClick={nextImage}><ButtonImg src="https://s3-us-west-2.amazonaws.com/adidas.gallery/rightArrowTran.png" alt="rightArrow" /></ButtonRight>
     </div>
   );
 };

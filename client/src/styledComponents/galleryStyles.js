@@ -67,10 +67,11 @@ export const Container = styled.div`
     transition: height 0.2s ease-in;
   }
   display: flex;
+  flex-shrink: 3;
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 1400px;
+  width: auto;
 `;
 
 export const Navigation = styled.div`

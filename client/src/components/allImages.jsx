@@ -12,7 +12,7 @@ const allImages = (props) => {
             }}
             key={oneImageObj.id}
           >
-            <SmallImg src={oneImageObj.url} alt="partOfAllImages" key={oneImageObj.id} />
+            <SmallImg rel="preload" src={oneImageObj.url} alt="partOfAllImages" key={oneImageObj.id} />
           </SmallImageContainer>
         );
       })}
