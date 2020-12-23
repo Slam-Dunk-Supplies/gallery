@@ -1,2 +1,2 @@
 # gallery
-View gallery of product. 
+View gallery of product
