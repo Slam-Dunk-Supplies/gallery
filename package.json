@@ -1,68 +1,67 @@
 {
   "name": "gallery",
-  "jest": {
-    "testEnvironment": "jsdom",
-    "setupFilesAfterEnv": [
-      "<rootDir>/setupTests.js"
-    ],
-    "coveragePathIgnorePatterns": ["/mocks/fileMock.js", "node_modules"],
-    "verbose": true,
-    "moduleNameMapper": {
-      "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/mocks/fileMock.js",
-      "\\.(css|less)$": "<rootDir>/mocks/fileMock.js"
-    }
-  },
   "version": "1.0.0",
-  "description": "Gallery component of Adidas clone including client, server, and databases.",
-  "main": "index.js",
+  "description": "Product display gallery for sports equipment commerce application slam dunk supplies",
+  "main": "client/src/index.js",
   "scripts": {
     "start": "nodemon server/index.js",
     "test": "jest --coverage",
     "build": "webpack -w",
-    "seed": "node server/seeding.js"
+    "downloadSeedingImgs": "node database/databaseSetup/imageDownloader.js",
+    "seed": "node database/databaseSetup/seeding.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/group2-fec/gallery.git"
+    "url": "git+https://github.com/group2-fec/slam-dunk-supplies.git"
   },
   "author": "Edgar Cetino",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/group2-fec/gallery/issues"
+    "url": "https://github.com/group2-fec/slam-dunk-supplies/issues"
   },
-  "homepage": "https://github.com/group2-fec/gallery#readme",
+  "homepage": "https://github.com/group2-fec/slam-dunk-supplies#readme",
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/testSetup/setupTests.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/testSetup/fileMock.js",
+      "node_modules"
+    ],
+    "verbose": true,
+    "moduleNameMapper": {
+      "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/testSetup/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/testSetup/fileMock.js"
+    }
+  },
   "dependencies": {
-    "axios": "^0.21.0",
+    "@babel/runtime": "^7.12.5",
+    "axios": "^0.21.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "express": "^4.17.1",
     "faker": "^5.1.0",
-    "file-loader": "^6.2.0",
-    "mongoose": "^5.10.14",
-    "nodemon": "^2.0.6",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "styled-components": "^5.2.1",
-    "url-loader": "^4.1.1"
+    "mongoose": "^5.11.11",
+    "nodemon": "^2.0.7",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "@babel/preset-react": "^7.12.5",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.2.1",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "eslint": "^7.13.0",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.17.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "jest": "^26.6.3",
     "jest-enzyme": "^7.1.2",
-    "webpack": "^5.4.0",
-    "webpack-cli": "^4.2.0"
+    "webpack": "^5.12.2",
+    "webpack-cli": "^4.3.1"
   }
 }
