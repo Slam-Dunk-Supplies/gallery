@@ -6,6 +6,7 @@ export const ButtonRight = styled.button`
   left: 35%;
   max-width: 4%;
   height: 5.5vh;
+  outline: none;
 `;
 
 export const ButtonRightImg = styled.img`

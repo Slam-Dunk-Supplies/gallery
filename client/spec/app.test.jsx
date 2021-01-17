@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from '../src/components/app';
-import { Container } from '../src/styledComponents/galleryStyles';
+import App from '../src/components/App';
+import { AppContainer } from '../src/styledComponents/AppStyles';
 
 const mockItemImageObjs = [
   {

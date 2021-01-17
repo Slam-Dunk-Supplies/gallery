@@ -1,8 +1,8 @@
-const { ItemImages } = require('../index.js');
-require('babel-core/register');
-require('babel-polyfill');
+const { ItemImages } = require('../../database/index.js');
+// require('babel-core/register');
+// require('babel-polyfill');
 
-jest.useFakeTimers();
+// jest.useFakeTimers();
 
 describe('Server Side Tests', () => {
   describe('ItemImage.find', () => {

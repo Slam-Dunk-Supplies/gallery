@@ -3,7 +3,7 @@ import { ButtonRight, ButtonRightImg } from '../styledComponents/NavButtonRightS
 
 const navButtonRight = (props) => {
   return (
-      <ButtonRight rel="preload" type="button" ><ButtonRightImg src="https://slam-dunk-supplies.s3-us-west-2.amazonaws.com/rightArrowTran.png" alt="rightArrow" /></ButtonRight>
+      <ButtonRight  type="button" onClick={props.nextImage}><ButtonRightImg rel="preload" src="https://slam-dunk-supplies.s3-us-west-2.amazonaws.com/rightArrowTran.png" alt="rightArrow" /></ButtonRight>
   );
 };
 

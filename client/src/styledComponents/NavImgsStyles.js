@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const NavImgs = styled.div`
+  &:hover {
+    cursor: pointer;
+  }
   position: relative;
   max-width: 2%;
   height: 2.5vh;
@@ -10,9 +13,12 @@ export const NavImgs = styled.div`
   align-items: center;
   right: 7.5%;
   top: 35%;
-`;
+  `;
 
-export const NavImg = styled.img`
+  export const NavImg = styled.img`
+  &:hover {
+    cursor: pointer;
+  }
   position: relative;
   border: 1px solid;
   min-width: 100%;
