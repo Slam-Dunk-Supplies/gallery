@@ -1,8 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: './client/src/components',
-  devtool: 'inline-source-map',
+  entry: './client/src',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, './public'),
+  },
   module: {
     rules: [
       {
@@ -12,23 +15,14 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
+            plugins: ['@babel/plugin-transform-runtime'],
           },
-        },
-      },
-      {
-        test: /\.(png|jpg)$/,
-        use: {
-          loader: 'file-loader',
         },
       },
     ],
   },
   resolve: {
     extensions: ['.jsx', '.js'],
-  },
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, './public'),
   },
   mode: 'production',
 };

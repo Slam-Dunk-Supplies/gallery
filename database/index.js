@@ -5,14 +5,15 @@ mongoose.connect('mongodb://localhost/itemImages',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useCreateIndex: true,
   });
 
 const db = mongoose.connection;
 
-db.on('error', console.error.bind(console, 'connection error: '));
+db.on('error', console.error.bind(console, 'db connection error: '));
 
 db.once('open', () => {
-  console.log('connection successful');
+  console.log('db connection successful');
 });
 
 const itemImagesSchema = new mongoose.Schema({
