@@ -6,7 +6,7 @@ const navImgs = (props) => {
     <NavImgs>
       {props.imgs.map((img) => {
         return (
-          <NavImg src={img.url} />
+          <NavImg onClick={() => {props.setMainImg(img.id)}} src={img.url} />
         )
       })}
     </NavImgs>

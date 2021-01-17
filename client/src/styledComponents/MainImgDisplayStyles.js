@@ -6,10 +6,6 @@ export const MainImgDisplay = styled.div`
   &:hover {
     cursor: url('https://slam-dunk-supplies.s3-us-west-2.amazonaws.com/zoom.png'), default;
   }
-  &:hover ${NavImg} {
-    height: 2.5vh;
-    transition: height 0.2s ease-in;
-  }
   position: relative;
   max-width: 50%;
   height: 65vh;
@@ -25,5 +21,5 @@ export const MainImg = styled.img`
   position: relative;
   min-width: 100%;
   height: 65vh;
-  right: 100%;
+  transition: right 0.5s ease-in;
 `;
