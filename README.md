@@ -87,10 +87,10 @@ To get a local copy up and running follow these simple steps.
 <!-- Testing Suite -->
 ## View Testing Suite
 
-1. Once installed. Simply run NPM test.
-  ```sh
-  npm test
-  ```
+1. Once installed. Simply run NPM test
+   ```sh
+   npm test
+   ```
 
 <!-- CONTACT -->
 ## Contact
