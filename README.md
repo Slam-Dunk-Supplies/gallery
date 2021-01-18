@@ -83,6 +83,7 @@ To get a local copy up and running follow these simple steps.
    npm start
    ```
 6. Go to localhost:3002 on your browser to view the gallery
+7. Add a number following to the end of the url (ex: localhost:3002/(some # between 1-100)). To view additional images aside from the default listing id of 1. 
 
 <!-- Testing Suite -->
 ## View Testing Suite
