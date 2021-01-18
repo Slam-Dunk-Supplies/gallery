@@ -14,6 +14,7 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation-and-starting-the-project">Installation</a></li>
+        <li><a href="#view-testing-suite">Test Suite</a></li>
       </ul>
     </li>
     <li><a href="#contact">Contact</a></li>
@@ -82,6 +83,14 @@ To get a local copy up and running follow these simple steps.
    npm start
    ```
 6. Go to localhost:3002 on your browser to view the gallery
+
+<!-- Testing Suite -->
+## View Testing Suite
+
+1. Once installed. Simply run NPM test.
+  ```sh
+  npm test
+  ```
 
 <!-- CONTACT -->
 ## Contact
