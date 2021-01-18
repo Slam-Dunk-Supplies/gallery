@@ -5,7 +5,7 @@ const padNum = (number, size) => {
   return result.substr(-size);
 };
 
-const seeder = async() => {
+const seeder = () => {
   let counter = 0;
   let lastSeed = 1;
   let lastIncrement = 6;
@@ -21,19 +21,14 @@ const seeder = async() => {
       fiveImageObjs.push(oneImageObjs);
       counter++;
     }
-    try {
-      const oneSeed = await new ItemImages({
-        id: i,
-        imageUrls: fiveImageObjs,
-      }).save();
-      lastSeed += 5;
-      lastIncrement += 5;
-      counter = 0;
-    } catch (error) {
-      console.error(error)
-    }
+    new ItemImages({
+      id: i,
+      imageUrls: fiveImageObjs,
+    }).save();
+    lastSeed += 5;
+    lastIncrement += 5;
+    counter = 0;
   }
-  console.log('Seeding Complete')
+  console.log('Seeding Complete');
 };
-
 seeder();

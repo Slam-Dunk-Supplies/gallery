@@ -14,3 +14,7 @@ export const ButtonLeftImg = styled.img`
   height: 2vh;
   padding: 15% 10% 10% 10%;
 `;
+
+export default {
+  ButtonLeft, ButtonLeftImg,
+};

@@ -38,3 +38,7 @@ export const Divider = styled(NavText)`
   font-size: 14px;
   padding-right: 5px;
 `;
+
+export default {
+  NavText, Back, Breadcrumbs, Divider,
+};

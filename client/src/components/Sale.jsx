@@ -1,7 +1,7 @@
 import React from 'react';
 import { Sale } from '../styledComponents/SaleStyles';
 
-const sale = (props) => {
+const sale = () => {
   return (
     <Sale>
       -30% OFF CODE GETACTIVE
@@ -10,4 +10,3 @@ const sale = (props) => {
 };
 
 export default sale;
-

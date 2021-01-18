@@ -1,11 +1,6 @@
 import styled from 'styled-components';
-import { NavImg } from './NavImgsStyles'
-
 
 export const MainImgDisplay = styled.div`
-  &:hover {
-    cursor: url('https://slam-dunk-supplies.s3-us-west-2.amazonaws.com/zoom.png'), default;
-  }
   position: relative;
   max-width: 50%;
   height: 65vh;
@@ -23,3 +18,7 @@ export const MainImg = styled.img`
   height: 65vh;
   transition: right 0.5s ease-in;
 `;
+
+export default {
+  MainImgDisplay, MainImg,
+};

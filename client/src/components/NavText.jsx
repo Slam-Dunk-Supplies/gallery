@@ -1,7 +1,9 @@
 import React from 'react';
-import { NavText, Back, Breadcrumbs, Divider } from '../styledComponents/NavTextStyles';
+import {
+  NavText, Back, Breadcrumbs, Divider,
+} from '../styledComponents/NavTextStyles';
 
-const navText = (props) => {
+const navText = () => {
   return (
     <NavText>
       <Back>Back</Back>
@@ -15,4 +17,3 @@ const navText = (props) => {
 };
 
 export default navText;
-
