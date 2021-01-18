@@ -25,8 +25,10 @@
 
 I worked with a team of engineers to create an open-source E-commerce application for sports equipment and contributed by making a responsive gallery UI to improve the product viewing experience. I used MongoDB to persist product information and securely stored high resolution images using S3. To maintain app stability, I created a test suite for my component using Jest and Enzyme with a standard of at least 80% test coverage.
 
+Project Link: [https://github.com/Slam-Dunk-Supplies/gallery](https://github.com/Slam-Dunk-Supplies/gallery)
+
 <!-- DEMO -->
-## DEMO
+## Demo
 
 ![til](./SlamDunkSuppliesGallery.gif)
 
@@ -53,13 +55,13 @@ To get a local copy up and running follow these simple steps.
   ```sh
   npm install npm@latest -g
   ```
-* mongoDB
-  [installation instructions] (https://docs.mongodb.com/manual/administration/install-community/)
+* mongoDB <br/>
+  [installation instructions](https://docs.mongodb.com/manual/administration/install-community/)
   
 <!-- INSTALLATION -->
 ### Installation and starting the project
 
-1. Clone the repo then cd into repo
+1. Clone the repo and then cd into the repo
    ```sh
    git clone https://github.com/Slam-Dunk-Supplies/gallery.git
    ```
@@ -79,7 +81,7 @@ To get a local copy up and running follow these simple steps.
    ```sh
    npm start
    ```
-6. Go to localhost:3002 on your browser to view gallery
+6. Go to localhost:3002 on your browser to view the gallery
 
 <!-- CONTACT -->
 ## Contact
@@ -94,4 +96,4 @@ To get a local copy up and running follow these simple steps.
   <img src="https://img.shields.io/badge/EMAIL-cetino--e%40hotmail.com-1152ba?style=for-the-badge"/>
 </a>
 
-Project Link: [https://github.com/Slam-Dunk-Supplies/gallery](https://github.com/Slam-Dunk-Supplies/gallery)
+
