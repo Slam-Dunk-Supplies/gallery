@@ -7,7 +7,7 @@ export const NavText = styled.div`
   font-size: 14px;
   display: inline-block;
   position: relative;
-  right: 50%;
+  right: 48%;
   bottom: 43%;
 `;
 

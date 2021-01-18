@@ -6,7 +6,7 @@ export const Sale = styled.div`
   }
   position: absolute;
   top: 20%;
-  right: -3.2%;
+  right: -6%;
   font-family: AdihausDIN,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 300;
