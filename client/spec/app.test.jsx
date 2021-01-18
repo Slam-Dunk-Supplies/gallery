@@ -3,67 +3,48 @@ import { shallow } from 'enzyme';
 import App from '../src/components/App';
 import { AppContainer } from '../src/styledComponents/AppStyles';
 
-const mockItemImageObjs = [
-  {
-    url: 'http://picsum.photos/seed/26/840/840',
-    id: 0,
-  },
-  {
-    url: 'http://picsum.photos/seed/27/840/840',
-    id: 1,
-  },
-  {
-    url: 'http://picsum.photos/seed/28/840/840',
-    id: 2,
-  },
-  {
-    url: 'http://picsum.photos/seed/29/840/840',
-    id: 3,
-  },
-  {
-    url: 'http://picsum.photos/seed/30/840/840',
-    id: 4,
-  },
-];
-
 describe('App Unit Tests', () => {
   describe('Render Tests', () => {
     it('should render the app component', () => {
       const wrapper = shallow(<App />);
-      expect(wrapper.find(Container)).toHaveLength(1);
+      expect(wrapper.find(AppContainer)).toHaveLength(1);
     });
   });
-  describe('Function invocation', () => {
-    it('should invoke getImages on componentDidMount', () => {
+  describe('Function Tests', () => {
+    it('should change state of curr Img when setMainImg is invoked', () => {
       const wrapper = shallow(<App />);
-      const mockGetImages = jest.fn();
-      wrapper.instance().getImages = mockGetImages;
-      wrapper.instance().forceUpdate();
-      wrapper.instance().componentDidMount();
-      expect(mockGetImages).toHaveBeenCalled();
-    });
-    it('should change state of main and curr Img when previousImg is invoked', () => {
-      const wrapper = shallow(<App />);
-      wrapper.setState({ currImg: 2, main: 'http://picsum.photos/seed/28/840/840' });
+      wrapper.setState({ currImg: 2 });
       expect(wrapper.state().currImg).toBe(2);
-      expect(wrapper.state().main).toBe('http://picsum.photos/seed/28/840/840');
-      wrapper.instance().setMain(mockItemImageObjs[0]);
+      wrapper.instance().setMainImg(0);
       expect(wrapper.state().currImg).toBe(0);
-      expect(wrapper.state().main).toBe('http://picsum.photos/seed/26/840/840');
     });
-    it('should change state of main and curr Img when nextImg is invoked', () => {
+    it('should change state of curr Img when nextImg is invoked', () => {
       const wrapper = shallow(<App />);
-      wrapper.setState({ currImg: 1, itemImageObjs: mockItemImageObjs, main: '' });
-      wrapper.instance().nextImage();
+      wrapper.setState({ currImg: 2 });
       expect(wrapper.state().currImg).toBe(2);
-      expect(wrapper.state().main).toBe('http://picsum.photos/seed/28/840/840');
+      wrapper.instance().nextImg();
+      expect(wrapper.state().currImg).toBe(3);
     });
-    it('should change state of main and curr Img when previousImg is invoked', () => {
+    it('should change state of curr Img when nextImg is invoked', () => {
       const wrapper = shallow(<App />);
-      wrapper.setState({ currImg: 3, itemImageObjs: mockItemImageObjs, main: '' });
-      wrapper.instance().previousImage();
+      wrapper.setState({ currImg: 4 });
+      expect(wrapper.state().currImg).toBe(4);
+      wrapper.instance().nextImg();
+      expect(wrapper.state().currImg).toBe(0);
+    });
+    it('should change state of curr Img when previousImg is invoked', () => {
+      const wrapper = shallow(<App />);
+      wrapper.setState({ currImg: 2 });
       expect(wrapper.state().currImg).toBe(2);
-      expect(wrapper.state().main).toBe('http://picsum.photos/seed/28/840/840');
+      wrapper.instance().previousImg();
+      expect(wrapper.state().currImg).toBe(1);
+    });
+    it('should change state of curr Img when previousImg is invoked', () => {
+      const wrapper = shallow(<App />);
+      wrapper.setState({ currImg: 0 });
+      expect(wrapper.state().currImg).toBe(0);
+      wrapper.instance().previousImg();
+      expect(wrapper.state().currImg).toBe(4);
     });
   });
 });

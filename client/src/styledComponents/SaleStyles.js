@@ -16,3 +16,5 @@ export const Sale = styled.div`
   transform: rotate(270deg);
   letter-spacing: 1.45px;
 `;
+
+export default Sale;

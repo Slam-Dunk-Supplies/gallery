@@ -1,8 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-
-import AllImages from '../src/components/allImages';
-import { SmallImageContainer } from '../src/styledComponents/galleryStyles';
+import MainImgDisplayComponent from '../src/components/MainImgDisplay';
+import { MainImg } from '../src/styledComponents/MainImgDisplayStyles';
 
 const sampleImgObjs = [
   {
@@ -22,30 +21,23 @@ const sampleImgObjs1 = [
   },
 ];
 
-describe('All Images Unit Tests', () => {
+describe('Main Img Display Unit Tests', () => {
   describe('Render Tests', () => {
-    it('should render 2 images when ', () => {
+    it('should render 2 imgs when given an array of 2 imgs ', () => {
       const wrapper = shallow(
-        <AllImages
-          itemImageObjs={sampleImgObjs}
+        <MainImgDisplayComponent
+          imgs={sampleImgObjs}
         />,
       );
-
-      expect(wrapper.find(SmallImageContainer)).toHaveLength(2);
+      expect(wrapper.find(MainImg)).toHaveLength(2);
     });
-  });
-  describe('onClick', () => {
-    it('should invoke the correct function when the component is clicked', () => {
-      const mockOnClickFunc = jest.fn();
+    it('should render 1 img when given an array of 1 img ', () => {
       const wrapper = shallow(
-        <AllImages
-          itemImageObjs={sampleImgObjs1}
-          setMain={() => mockOnClickFunc()}
+        <MainImgDisplayComponent
+          imgs={sampleImgObjs1}
         />,
       );
-      const clickableImg = wrapper.find(SmallImageContainer);
-      clickableImg.simulate('click');
-      expect(mockOnClickFunc).toHaveBeenCalled();
+      expect(wrapper.find(MainImg)).toHaveLength(1);
     });
   });
 });

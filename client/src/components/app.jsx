@@ -15,10 +15,10 @@ class App extends React.Component {
       imgs: [],
       currImg: 0,
     };
-    this.getImages = this.getImages.bind(this);
+    this.getImgs = this.getImgs.bind(this);
     this.setMainImg = this.setMainImg.bind(this);
-    this.nextImage = this.nextImage.bind(this);
-    this.previousImage = this.previousImage.bind(this);
+    this.nextImg = this.nextImg.bind(this);
+    this.previousImg = this.previousImg.bind(this);
   }
 
   componentDidMount() {
@@ -27,10 +27,10 @@ class App extends React.Component {
       const arr = window.location.pathname.split('/');
       [id] = [arr[1]];
     }
-    this.getImages(id);
+    this.getImgs(id);
   }
 
-  async getImages(itemId) {
+  async getImgs(itemId) {
     try {
       const response = await Axios.get(`/api/images/?id=${itemId}`);
       this.setState({
@@ -47,7 +47,7 @@ class App extends React.Component {
     });
   }
 
-  nextImage() {
+  nextImg() {
     const { currImg } = this.state;
 
     if (currImg === 4) {
@@ -61,7 +61,7 @@ class App extends React.Component {
     }
   }
 
-  previousImage() {
+  previousImg() {
     const { currImg } = this.state;
 
     if (currImg === 0) {
@@ -79,12 +79,12 @@ class App extends React.Component {
     const { imgs, currImg } = this.state;
     return (
       <AppContainer>
-        <MainImgDisplay imgs={imgs} currImg={currImg}/>
-        <NavImgs setMainImg={this.setMainImg} imgs={imgs}/>
-        <NavButtonLeft previousImage={this.previousImage}/>
-        <NavButtonRight nextImage={this.nextImage}/>
-        <NavText/>
-        <Sale/>
+        <MainImgDisplay imgs={imgs} currImg={currImg} />
+        <NavImgs setMainImg={this.setMainImg} imgs={imgs} />
+        <NavButtonLeft previousImg={this.previousImg} />
+        <NavButtonRight nextImg={this.nextImg} />
+        <NavText />
+        <Sale />
       </AppContainer>
     );
   }

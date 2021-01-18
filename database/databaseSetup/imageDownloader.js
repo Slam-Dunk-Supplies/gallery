@@ -2,7 +2,7 @@ const fs = require('fs');
 const axios = require('axios');
 const path = require('path');
 
-const PATH = path.join(__dirname + '/seedingImages');
+const PATH = path.join(__dirname, '/seedingImages');
 const url = 'https://loremflickr.com/840/840/sports';
 
 const padNum = (number, size) => {
@@ -18,6 +18,7 @@ const getImage = async (fileName) => {
     return stream.pipe(fs.createWriteStream(WRITE_PATH));
   } catch (error) {
     console.error(error);
+    return error;
   }
 };
 

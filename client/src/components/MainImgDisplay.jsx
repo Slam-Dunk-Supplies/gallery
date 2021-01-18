@@ -4,14 +4,13 @@ import { MainImgDisplay, MainImg } from '../styledComponents/MainImgDisplayStyle
 const mainImgDisplay = (props) => {
   return (
     <MainImgDisplay>
-          {props.imgs.map((img) => {
-            return (
-              <MainImg src={img.url} style={{ right: `${props.currImg * 100}%` }} />
-            )
-          })}
+      {props.imgs.map((img) => {
+        return (
+          <MainImg src={img.url} key={img.id} style={{ right: `${props.currImg * 100}%` }} />
+        );
+      })}
     </MainImgDisplay>
   );
 };
 
 export default mainImgDisplay;
-

@@ -3,7 +3,9 @@ import { ButtonLeft, ButtonLeftImg } from '../styledComponents/NavButtonLeftStyl
 
 const navButtonLeft = (props) => {
   return (
-      <ButtonLeft  type="button" onClick={props.previousImage}><ButtonLeftImg rel="preload" src="https://slam-dunk-supplies.s3-us-west-2.amazonaws.com/leftArrowTran.png" alt="leftArrow" /></ButtonLeft>
+    <ButtonLeft type="button" onClick={props.previousImg}>
+      <ButtonLeftImg rel="preload" src="https://slam-dunk-supplies.s3-us-west-2.amazonaws.com/leftArrowTran.png" alt="leftArrow" />
+    </ButtonLeft>
   );
 };
 

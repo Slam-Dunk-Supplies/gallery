@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { NavImg } from './NavImgsStyles'
+import { NavImg } from './NavImgsStyles';
 
 export const AppContainer = styled.div`
   &:hover ${NavImg} {
@@ -16,3 +16,4 @@ export const AppContainer = styled.div`
   background-color: #eceff0;
 `;
 
+export default AppContainer;

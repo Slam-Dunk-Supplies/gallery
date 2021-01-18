@@ -15,7 +15,7 @@ export const NavImgs = styled.div`
   top: 35%;
   `;
 
-  export const NavImg = styled.img`
+export const NavImg = styled.img`
   &:hover {
     cursor: pointer;
   }
