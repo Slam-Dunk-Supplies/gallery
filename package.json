@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/group2-fec/slam-dunk-supplies.git"
+    "url": "git+https://github.com/Slam-Dunk-Supplies/gallery.git"
   },
   "author": "Edgar Cetino",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/group2-fec/slam-dunk-supplies/issues"
+    "url": "https://github.com/Slam-Dunk-Supplies/gallery/issues"
   },
-  "homepage": "https://github.com/group2-fec/slam-dunk-supplies#readme",
+  "homepage": "https://github.com/Slam-Dunk-Supplies/gallery#readme",
   "jest": {
     "testEnvironment": "jsdom",
     "verbose": true,
@@ -27,7 +27,6 @@
       "<rootDir>/testSetup/setupTests.js"
     ],
     "coveragePathIgnorePatterns": [
-      "/testSetup/fileMock.js",
       "node_modules"
     ],
     "moduleNameMapper": {
