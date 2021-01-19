@@ -45,8 +45,8 @@ Project Link: [https://github.com/Slam-Dunk-Supplies/gallery](https://github.com
 * [AWS S3](https://aws.amazon.com/s3/)
 * [Jest](https://jestjs.io/)
 
-<!-- Built With -->
-### Built With
+<!-- Related Projects -->
+### Related Projects
 
 * [Slam Dunk Supplies Related Items](https://github.com/Slam-Dunk-Supplies/related-items)
 * [Slam Dunk Supplies Checkout](https://github.com/Slam-Dunk-Supplies/add-to-bag)
