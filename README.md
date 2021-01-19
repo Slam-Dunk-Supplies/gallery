@@ -7,6 +7,7 @@
       <ul>
        <li><a href="#demo">Demo</a></li>
        <li><a href="#built-with">Built With</a></li>
+       <li><a href="#related-projects">Related Projects</a></li>      
       </ul>
     </li>
     <li>
@@ -43,6 +44,13 @@ Project Link: [https://github.com/Slam-Dunk-Supplies/gallery](https://github.com
 * [MongoDB](https://www.mongodb.com/)
 * [AWS S3](https://aws.amazon.com/s3/)
 * [Jest](https://jestjs.io/)
+
+<!-- Built With -->
+### Built With
+
+* [Slam Dunk Supplies Related Items](https://github.com/Slam-Dunk-Supplies/related-items)
+* [Slam Dunk Supplies Checkout](https://github.com/Slam-Dunk-Supplies/add-to-bag)
+* [Slam Dunk Supplies Reviews](https://github.com/Slam-Dunk-Supplies/customer-reviews)
 
 <!-- GETTING STARTED -->
 ## Getting Started
