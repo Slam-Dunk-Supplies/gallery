@@ -29,7 +29,7 @@ I worked with a team of engineers to create an open-source E-commerce applicatio
 Project Link: [https://github.com/Slam-Dunk-Supplies/gallery](https://github.com/Slam-Dunk-Supplies/gallery)
 
 <!-- DEMO -->
-## Demo
+### Demo
 
 ![til](./SlamDunkSuppliesGallery.gif)
 
@@ -86,7 +86,7 @@ To get a local copy up and running follow these simple steps.
 7. Add a number following to the end of the url (ex: localhost:3002/(some # between 1-100)). To view additional images aside from the default listing id of 1. 
 
 <!-- Testing Suite -->
-## View Testing Suite
+### View Testing Suite
 
 1. Once installed. Simply run NPM test
    ```sh
